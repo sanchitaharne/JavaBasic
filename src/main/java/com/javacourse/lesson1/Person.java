@@ -3,13 +3,13 @@ import com.javacourse.lesson2.Name;
 public class Person {
 
     private Name personName;
-
+    private static int personCounter;
     public Person(Name personName){
         this.personName = personName;
     }
 
     public Person() {
-        // empty on purpose
+        personCounter++;
     }
 
     public String helloWorld() {
@@ -18,5 +18,9 @@ public class Person {
 
     public String sayHello(String person) {
         return "Hello " + person;
+    }
+
+    public static int returnNumberOfPersons() {
+        return personCounter;
     }
 }

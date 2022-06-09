@@ -18,6 +18,49 @@ public class PersonTest{
         assertEquals("Hello Sanchita", person1.sayHello("Sanchita"));
     }
 
+    @Test
+    public void shouldReturnNumberOfPersons() {
+        Person person1 = new Person();
+        Person person2 = new Person();
+        Person person3 = new Person();
+        Person person4 = new Person();
+        Person person5 = new Person();
 
+        assertEquals(5, Person.returnNumberOfPersons());
+    }
 
+    @Test
+    public void demonstrateBoolean(){
+        boolean monday = false;
+        boolean friday = false;
+        boolean tuesday = false;
+        boolean sunny = false;
+        if(monday ) {
+            drinkBeer();
+        }else if(friday) {
+            drinkWater();
+        }
+        else if (sunny){
+            goSwimming();
+        }
+        else{
+            drinkMilk();
+        }
+    }
+
+    private void drinkMilk() {
+        System.out.println("drinking milk");
+    }
+
+    private void goSwimming() {
+        System.out.println("Go Swimming");
+    }
+
+    private void drinkWater() {
+        System.out.println("drinking water");
+    }
+
+    private void drinkBeer() {
+        System.out.println("drinking beer");
+    }
 }
